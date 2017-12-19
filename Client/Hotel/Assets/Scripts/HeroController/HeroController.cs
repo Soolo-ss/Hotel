@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class HeroController : MonoBehaviour {
     private Animator animator;
+    private List<Sprite> heroSprites;
 
 	// Use this for initialization
 	void Start () {
-        Debug.Log("isWork" + animator.GetBool("isWalk"));
-	}
+        this.animator = GetComponent<Animator>();
+
+        heroSprites = new List<Sprite>(Resources.LoadAll<Sprite>("Sprites/Hero001"));
+
+        Debug.Log(heroSprites.Count);
+    }
 	
 	// Update is called once per frame
 	void Update () {
