@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroController : MonoBehaviour {
+public class AnimatorController : MonoBehaviour {
     private Animator animator;
 	private List<KeyCode> runKey = new List<KeyCode>() { KeyCode.W, KeyCode.A, KeyCode.S, KeyCode.D };
 	private int moveSpeed = 1;
@@ -60,7 +60,6 @@ public class HeroController : MonoBehaviour {
 		}
 
 		if (GetRunKeyUp()){
-			Debug.Log ("getrunkeyup");
 			animator.SetBool ("isRun", false);
 
 			if (Input.GetKeyUp (KeyCode.W)) {
