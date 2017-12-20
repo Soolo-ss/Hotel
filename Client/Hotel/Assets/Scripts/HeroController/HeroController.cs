@@ -14,38 +14,13 @@ public class HeroController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 		move ();
+	}
 	
-	}
-
-	private bool GetRunKeyDown(){
-		bool isRun = false;
-		foreach (KeyCode key in runKey) {
-			if (Input.GetKeyDown (key)) {
-				isRun = true;
-				break;
-			}
-		}
-
-		return isRun;
-	}
-
-	private bool GetRunKeyUp(){
-		bool isUp = false;
-		foreach (KeyCode key in runKey) {
-			if (Input.GetKeyUp (key)) {
-				isUp = true;
-				break;
-			}
-		}
-
-		return isUp;
-	}
-
 	public void move()
 	{
 		if (GetRunKeyDown ()) {
+            Debug.Log("getrunkeydown");
 			animator.SetBool ("isRun", true);
 
 			if (Input.GetKeyDown (KeyCode.W)) {
@@ -75,9 +50,35 @@ public class HeroController : MonoBehaviour {
 		}
 	}
 
-	private void moveCalc() {
-		
-	}
+    private bool GetRunKeyDown()
+    {
+        bool isRun = false;
+        foreach (KeyCode key in runKey)
+        {
+            if (Input.GetKeyDown(key))
+            {
+                isRun = true;
+                break;
+            }
+        }
+
+        return isRun;
+    }
+
+    private bool GetRunKeyUp()
+    {
+        bool isUp = false;
+        foreach (KeyCode key in runKey)
+        {
+            if (Input.GetKeyUp(key))
+            {
+                isUp = true;
+                break;
+            }
+        }
+
+        return isUp;
+    }
 
 	private void moveUpClip() {
 		animator.SetFloat ("xdir", 0);
