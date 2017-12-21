@@ -7,6 +7,7 @@ public class MoveController : MonoBehaviour {
 
 	private float speed = 1.0f;
 	private Transform mainCameraTramnsform;
+	private Vector3 moveDirection = Vector3.zero;
 
 	// Use this for initialization
 	void Start () {
@@ -16,23 +17,13 @@ public class MoveController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 mainCameraForward = Vector3.Scale (mainCameraTramnsform.forward, new Vector3 (1, 0, 1)).normalized;
+		moveDirection = new Vector3 (-Input.GetAxis ("Horizontal"), 0, -Input.GetAxis ("Vertical"));
+		moveDirection = transform.TransformDirection (moveDirection);
+		moveDirection *= speed;
 
-		print ("main_x" + "_" + mainCameraForward.x);
-		print ("main_y" + "_" + mainCameraForward.y);
-		print ("main_z" + "_" + mainCameraForward.z);
-
-		if (Input.GetKeyDown (KeyCode.W))
-			mainCameraForward = Vector3.Scale (mainCameraForward, new Vector3 (1, 1, 1)).normalized;
-		else if (Input.GetKeyDown (KeyCode.A))
-			mainCameraForward = Vector3.Scale (mainCameraForward, new Vector3 (-1, 1, 1)).normalized;
-		else if (Input.GetKeyDown (KeyCode.D))
-			mainCameraForward = Vector3.Scale (mainCameraForward, new Vector3 (1, 1, -1)).normalized;
-		else if (Input.GetKeyDown (KeyCode.S))
-			mainCameraForward = Vector3.Scale (mainCameraForward, new Vector3 (-1, 1, -1)).normalized;
-
-		Debug.Log (mainCameraForward);
-
-		this.characterController.Move (speed * mainCameraForward);
+		if (moveDirection != Vector3.zero) {
+			Debug.Log (moveDirection);
+			characterController.Move (moveDirection * Time.deltaTime);
+		}
 	}
 }
