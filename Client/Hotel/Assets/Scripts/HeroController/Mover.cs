@@ -23,6 +23,7 @@ public class Mover : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		move ();
+<<<<<<< HEAD:Client/Hotel/Assets/Scripts/HeroController/Mover.cs
 	}
 
 	void FixedUpdate() {
@@ -59,11 +60,14 @@ public class Mover : MonoBehaviour {
 		}
 
 		return isUp;
+=======
+>>>>>>> origin/master:Client/Hotel/Assets/Scripts/HeroController/AnimatorController.cs
 	}
-
+	
 	public void move()
 	{
 		if (GetRunKeyDown ()) {
+            Debug.Log("getrunkeydown");
 			animator.SetBool ("isRun", true);
 
 			if (Input.GetKeyDown (KeyCode.W)) {
@@ -94,9 +98,41 @@ public class Mover : MonoBehaviour {
 
 	}
 
+<<<<<<< HEAD:Client/Hotel/Assets/Scripts/HeroController/Mover.cs
 	private void moveCalc() {
 
 	}
+=======
+    private bool GetRunKeyDown()
+    {
+        bool isRun = false;
+        foreach (KeyCode key in runKey)
+        {
+            if (Input.GetKeyDown(key))
+            {
+                isRun = true;
+                break;
+            }
+        }
+
+        return isRun;
+    }
+
+    private bool GetRunKeyUp()
+    {
+        bool isUp = false;
+        foreach (KeyCode key in runKey)
+        {
+            if (Input.GetKeyUp(key))
+            {
+                isUp = true;
+                break;
+            }
+        }
+
+        return isUp;
+    }
+>>>>>>> origin/master:Client/Hotel/Assets/Scripts/HeroController/AnimatorController.cs
 
 	private void moveUpClip() {
 		animator.SetFloat ("xdir", 0);
