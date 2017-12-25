@@ -6,13 +6,13 @@ public class CameraBillboard : MonoBehaviour {
 
     public GameObject mainCamera;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        
-    }
+	void Start () {  
+		mainCamera = Camera.main.gameObject;
+		this.transform.LookAt (mainCamera.transform.position);
+	}  
+	void Update(){  
+		Vector3 v = mainCamera.transform.position - transform.position;  
+		v.x = v.z = 0.0f;  
+		transform.LookAt(mainCamera.transform.position - v);   
+	}  
 }
