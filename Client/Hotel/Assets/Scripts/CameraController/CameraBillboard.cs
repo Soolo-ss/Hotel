@@ -6,13 +6,19 @@ public class CameraBillboard : MonoBehaviour {
 
     public GameObject mainCamera;
 
+	Vector3 nowLook = new Vector3();
+
 	void Start () {  
 		mainCamera = Camera.main.gameObject;
-		this.transform.LookAt (mainCamera.transform.position);
+		Debug.Log(mainCamera.transform.forward);
 	}  
 	void Update(){  
-		Vector3 v = mainCamera.transform.position - transform.position;  
-		v.x = v.z = 0.0f;  
-		transform.LookAt(mainCamera.transform.position - v);   
-	}  
+		Vector3 forward = mainCamera.transform.forward;
+
+		if (forward != nowLook)
+			Debug.Log(forward);
+
+		nowLook = forward;
+		this.transform.rotation = Quaternion.LookRotation(mainCamera.transform.forward);		
+	} 
 }

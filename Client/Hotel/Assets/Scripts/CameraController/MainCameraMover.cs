@@ -20,8 +20,7 @@ public class MainCameraMover : MonoBehaviour {
     void Update()
     {
 		//Vector3 offsetVec = new Vector3 (0, Mathf.Sqrt (offset / 3f), offset);
-		//transform.position = Vector3.SmoothDamp (transform.position, target.position + offsetVec, ref cameraVelocity, 0);
-
+		//transform.position = Vector3.SmoothDamp (transform.position, target.position + offsetVec, ref 
 		this.transform.position = target.transform.position + offsetVec;
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -37,5 +36,6 @@ public class MainCameraMover : MonoBehaviour {
 
         this.transform.LookAt(target);
 		target.transform.LookAt (this.transform);
+		
     }
 }
