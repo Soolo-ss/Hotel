@@ -19,7 +19,7 @@ public class StartUIController : MonoBehaviour {
         startBtn.onClick.AddListener(() =>
         {
             Debug.Log("load loading scence");
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Loading");
         });
 
         saveBtn.onClick.AddListener(() =>
