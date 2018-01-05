@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -219,16 +217,91 @@
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
+    <Reference Include="LuaInterpreter">
+      <HintPath>Assets\Plugins\Dialogue System\DLLs\LuaInterpreter.dll</HintPath>
+    </Reference>
+    <Reference Include="DialogueSystem">
+      <HintPath>Assets\Plugins\Dialogue System\DLLs\DialogueSystem.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\UI\LoadingUIController.cs" />
+    <ProjectReference Include="Hotel.Plugins.csproj">
+      <Project>{F1786D8A-5460-51F3-A8D2-60D6CDB00EDC}</Project>
+      <Name>Hotel.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Scripts\CameraController\CameraBillboard.cs" />
     <Compile Include="Assets\Scripts\CameraController\MainCameraMover.cs" />
     <Compile Include="Assets\Scripts\Common\CommonFunc.cs" />
     <Compile Include="Assets\Scripts\HeroController\Mover.cs" />
+    <Compile Include="Assets\Scripts\UI\LoadingUIController.cs" />
     <Compile Include="Assets\Scripts\UI\StartUIController.cs" />
+    <Compile Include="Assets\SubTitiles.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Plugins\Cinemachine\ReleaseNotes.txt" />
+    <None Include="Assets\Plugins\Dialogue System\DLLs\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Documentation\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Art\Portraits\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Art\Sounds\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Art\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Bark Example\Bark Conversation\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Bark Example\Bark Example.xml" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Bark Example\Three NPCs Bark\Three NPCs Bark.xml" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Bark Example\Three NPCs Bark\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Bark Example\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Camera Angle Studio\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Feature Demo\Articy Feature Demo\Articy Feature Demo.xml" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Feature Demo\Dialogue Database\Feature Demo.xml" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Feature Demo\Feature Demo with Continue Button\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Feature Demo\Menu Text Demo\Feature Demo With Menu Text.xml" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Feature Demo\Menu Text Demo\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Feature Demo\Multiple Database Example\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Feature Demo\Text Input Example\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Feature Demo\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Lua Example\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Mobile Test\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Quest Example\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Quick Start\Quick Start.xml" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Quick Start\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Save Load Example\_README_FIRST_IMPORTANT!.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Sequence Example\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Unity UI Examples\Animated Portrait Example\Private Hart Animated Portrait\sprites_credits.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\Unity UI Examples\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Examples\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Legacy Unity GUI Prefabs\Circle\Textures\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Legacy Unity GUI Prefabs\Computer\Bitwise Font\!license.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Legacy Unity GUI Prefabs\Computer\Typing.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Legacy Unity GUI Prefabs\Necromancer\Necromancer GUI\Kingthings.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Legacy Unity GUI Prefabs\Necromancer\Necromancer GUI\Readme.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Legacy Unity GUI Prefabs\Necromancer\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Legacy Unity GUI Prefabs\Shared Audio\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Legacy Unity GUI Prefabs\Shared Fonts\Orbitron\SIL Open Font License.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Legacy Unity GUI Prefabs\Shared Textures\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Legacy Unity GUI Prefabs\Wheel\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Legacy Unity GUI Prefabs\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Mobile\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Mobile\link.xml" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Unity UI Prefabs\Mobile\_IMPORTANT_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Unity UI Prefabs\Shared Assets\Playtime Font\bold\license.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Unity UI Prefabs\Shared Assets\Playtime Font\bold\read me.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Unity UI Prefabs\Shared Assets\Playtime Font\medium\license.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Unity UI Prefabs\Shared Assets\Playtime Font\medium\read me.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Unity UI Prefabs\Shared Assets\Playtime Font\regular\license.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Unity UI Prefabs\Shared Assets\Playtime Font\regular\read me.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Unity UI Prefabs\Shared Assets\Playtime Font\solid\license.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Unity UI Prefabs\Shared Assets\Playtime Font\solid\read me.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Unity UI Prefabs\Speech Bubble\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Unity UI Prefabs\Unity UI Assets\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\Unity UI Prefabs\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Prefabs\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Scripts\Shaders\LinesColoredBlended.shader" />
+    <None Include="Assets\Plugins\Dialogue System\Scripts\Supplemental\UI\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Scripts\Supplemental\Utility\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Scripts\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\Third Party Support\_README.txt" />
+    <None Include="Assets\Plugins\Dialogue System\_README_EVALUATION.txt" />
     <None Include="Assets\Resources\Sharders\Billboard.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

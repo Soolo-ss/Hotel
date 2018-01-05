@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel", "Hotel.csproj", "{64614C62-89EB-6EBB-FAB0-FCB990DAAA87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.Plugins", "Hotel.Plugins.csproj", "{F1786D8A-5460-51F3-A8D2-60D6CDB00EDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.Editor.Plugins", "Hotel.Editor.Plugins.csproj", "{5DE291F6-4013-B74A-B0D3-075D91982247}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{64614C62-89EB-6EBB-FAB0-FCB990DAAA87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64614C62-89EB-6EBB-FAB0-FCB990DAAA87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64614C62-89EB-6EBB-FAB0-FCB990DAAA87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1786D8A-5460-51F3-A8D2-60D6CDB00EDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1786D8A-5460-51F3-A8D2-60D6CDB00EDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1786D8A-5460-51F3-A8D2-60D6CDB00EDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1786D8A-5460-51F3-A8D2-60D6CDB00EDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DE291F6-4013-B74A-B0D3-075D91982247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DE291F6-4013-B74A-B0D3-075D91982247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DE291F6-4013-B74A-B0D3-075D91982247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DE291F6-4013-B74A-B0D3-075D91982247}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
